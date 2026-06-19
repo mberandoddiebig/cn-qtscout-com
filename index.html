@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>球探 · 赛事数据与延伸阅读助手</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f9f7f4; font-family: system-ui, -apple-system, 'Noto Serif SC', 'Georgia', serif; color: #2e2b28; line-height: 1.7; padding: 2rem 1.5rem; }
+    .page { max-width: 880px; margin: 0 auto; }
+
+    /* hero */
+    .hero { border-bottom: 1px solid #ddd8cf; padding-bottom: 2rem; margin-bottom: 2.5rem; }
+    .hero h1 { font-size: 2.2rem; font-weight: 500; letter-spacing: 1px; color: #2a2520; margin-bottom: 0.4rem; }
+    .hero .sub { color: #6f6359; font-size: 1rem; border-left: 3px solid #bbb0a2; padding-left: 1rem; margin: 0.8rem 0 1.2rem 0; }
+
+    /* 卡片网格 */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin: 2rem 0; }
+    @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+    .card { background: #ffffff; border: 1px solid #e5e0d8; border-radius: 14px; padding: 1.6rem 1.5rem; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+    .card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: #302b26; border-left: 4px solid #c9b9a9; padding-left: 0.75rem; }
+    .card p, .card ul { font-size: 0.94rem; color: #3d3833; margin-bottom: 0.5rem; }
+    .card ul { padding-left: 1.2rem; list-style: square; }
+    .card ul li { margin-bottom: 0.3rem; }
+
+    /* 引用块 / 提示框 */
+    .inset-box { background: #f2ede6; border-left: 5px solid #b7a696; padding: 1.2rem 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0; font-size: 0.96rem; color: #3b342f; }
+    .inset-box strong { color: #2d2722; }
+
+    /* 内联 prose */
+    .prose { margin: 2rem 0; }
+    .prose p { margin-bottom: 1rem; }
+    .prose a { color: #7f6b59; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+    .prose a:hover { color: #b3542c; }
+
+    /* FAQ 摘要 */
+    .faq-summary { display: flex; flex-direction: column; gap: 0.6rem; margin: 1.8rem 0; }
+    .faq-item { border-bottom: 1px dashed #d9d2c9; padding: 0.5rem 0; }
+    .faq-q { font-weight: 600; font-size: 0.95rem; color: #3f3933; }
+    .faq-a { font-size: 0.9rem; color: #58504a; margin-top: 0.1rem; }
+
+    .link-block { margin: 2rem 0 1rem; font-size: 1rem; }
+    .link-block a { color: #7f6b59; text-decoration: underline; }
+
+    hr { border: none; border-top: 1px solid #e5ddd3; margin: 2rem 0; }
+    .footer-note { font-size: 0.8rem; color: #8d8177; text-align: center; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <div class="hero">
+    <h1>球探 · 查询·对照·延伸</h1>
+    <div class="sub">日常赛事数据、人员档案与跨语言信息拼图</div>
+  </div>
+
+  <!-- 介绍段落 -->
+  <div class="prose">
+    <p>不论你是在复核某位球员的近期出场记录，还是需要快速对照多个联赛的实时数据，<a href="https://cn-qtscout.com">球探</a>都能作为一站式的参照基底。它不替代深度分析报告，但适合在日常训练、内容写作或赛前准备时提供结构清晰的检索入口与关联页面。</p>
+    <p>以下从用途、适用人群、常见用法三个维度拆解这个工具的实际手感。</p>
+  </div>
+
+  <!-- 信息卡片 -->
+  <div class="grid-2">
+    <div class="card">
+      <h3>📋 用途卡片</h3>
+      <ul>
+        <li>球员/球队状态速查，含基础指标与近期走势</li>
+        <li>赛程、积分榜、转会动态的对照浏览</li>
+        <li>延伸阅读：通过数据链接跳转至深度统计或新闻</li>
+        <li>多语言名称 / 译名对照辅助</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>👥 适合人群</h3>
+      <ul>
+        <li>赛事内容编辑、解说与写手</li>
+        <li>业余/半专业球探、青训观察者</li>
+        <li>需要快速横向比较数据的球迷</li>
+        <li>对足球数据拥有“查询+对照”双重需求的人</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 提示 / 引用块 -->
+  <div class="inset-box">
+    <strong>提示：</strong> 球探更贴近“查询中枢”而非分析引擎。建议将页面作为出发点，再结合外部平台做深度拆解。数据更新频次通常为每日同步，赛日前后注意手动刷新。
+  </div>
+
+  <!-- 自然嵌入链接的第二段 -->
+  <div class="prose">
+    <p>以日常场景为例：当你需要在一小时内浏览三场不同联赛的首发、替补与换人时间轴，同时核对球员国籍与年龄时，<a href="https://cn-qtscout.com">球探</a>的卡片式布局可以减少反复切标签的消耗。每个条目均附有延伸链接，方便从摘要进入原始统计页或维基条目。</p>
+  </div>
+
+  <!-- FAQ 摘要（仅展示，非完整 FAQ） -->
+  <div class="faq-summary">
+    <div class="faq-item">
+      <div class="faq-q">Q: 数据覆盖哪些联赛？</div>
+      <div class="faq-a">主流欧洲联赛、亚非重点赛事、部分青年梯队与杯赛。具体列表可至站内“覆盖范围”查看。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 适合移动端快速查阅吗？</div>
+      <div class="faq-a">站内采用响应式设计，卡片与表格在手机屏幕可完整显示，推荐横屏浏览复杂对照表。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 能直接导出数据吗？</div>
+      <div class="faq-a">目前支持复制表格段落，未提供批量导出。如需持续追踪可配合浏览器书签或笔记工具。</div>
+    </div>
+  </div>
+
+  <!-- 自然嵌入链接的第三处（分散在不同段落） -->
+  <div class="link-block">
+    如果尚未收藏，可将 <a href="https://cn-qtscout.com">球探</a> 加入书签栏，作为每日赛前快速对照页。
+  </div>
+
+  <hr>
+  <div class="footer-note">
+    内容基于公开赛事信息汇编 · 仅供个人参考
+  </div>
+</div>
+</body>
+</html>

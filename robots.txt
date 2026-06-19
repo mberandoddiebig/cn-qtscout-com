@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mberandoddiebig.github.io/cn-qtscout-com/sitemap.xml
